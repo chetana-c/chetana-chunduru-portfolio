@@ -1,0 +1,63 @@
+.education {
+  background-color: #0f0f0f;
+}
+
+.education .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.education-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 4px solid #64b5f6;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(100, 181, 246, 0.1);
+}
+
+.education-card h3 {
+  color: #64b5f6;
+  margin-bottom: 10px;
+}
+
+.education-card .school {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.education-card .year {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.education-card .gpa {
+  color: #64b5f6;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.education-card .description {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}

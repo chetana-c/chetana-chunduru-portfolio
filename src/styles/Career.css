@@ -1,0 +1,107 @@
+.career {
+  background-color: #0f0f0f;
+}
+
+.career .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.experience-timeline {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #64b5f6;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 80px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 60px;
+  height: 60px;
+  background-color: #0f0f0f;
+  border: 3px solid #64b5f6;
+  border-radius: 50%;
+}
+
+.experience-content {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 3px solid #64b5f6;
+}
+
+.experience-content h3 {
+  color: #64b5f6;
+  margin-bottom: 5px;
+}
+
+.experience-content .company {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.experience-content .duration {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.experience-content .description {
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  color: #b0b0b0;
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #64b5f6;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 15px;
+  }
+
+  .timeline-marker {
+    left: -10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .experience-item {
+    padding-left: 60px;
+  }
+}

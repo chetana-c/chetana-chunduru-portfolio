@@ -1,22 +1,29 @@
-import { lazy, Suspense } from "react";
+import { Suspense } from "react";
 import "./App.css";
-
-const CharacterModel = lazy(() => import("./components/Character"));
-const MainContainer = lazy(() => import("./components/MainContainer"));
-import { LoadingProvider } from "./context/LoadingProvider";
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import About from "./components/About";
+import Education from "./components/Education";
+import Career from "./components/Career";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <>
-      <LoadingProvider>
-        <Suspense>
-          <MainContainer>
-            <Suspense>
-              <CharacterModel />
-            </Suspense>
-          </MainContainer>
-        </Suspense>
-      </LoadingProvider>
+      <Navbar />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Landing />
+        <About />
+        <Education />
+        <Skills />
+        <Career />
+        <Projects />
+        <Contact />
+        <Footer />
+      </Suspense>
     </>
   );
 };

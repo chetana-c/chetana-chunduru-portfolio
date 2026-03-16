@@ -1,34 +1,39 @@
-import { PropsWithChildren } from "react";
-import "./styles/Landing.css";
+import { FiDownload } from "react-icons/fi";
+import "../styles/Landing.css";
 
-const Landing = ({ children }: PropsWithChildren) => {
+const Landing = () => {
   return (
-    <>
-      <div className="landing-section" id="landingDiv">
-        <div className="landing-container">
-          <div className="landing-intro">
-            <h2>Hello! I'm</h2>
-            <h1>
-              RAJESH
-              <br />
-              <span>CHITYAL</span>
-            </h1>
+    <section id="home" className="landing">
+      <div className="landing-content">
+        <h1>Hi, I'm <span className="highlight">Chetana Chunduru</span></h1>
+        <p className="subtitle">Data Engineer | ML Enthusiast | 5+ Years Experience</p>
+        <p className="description">
+          Building scalable data pipelines & ML solutions at <strong>LexisNexis</strong> | 
+          Spark | Azure/AWS | gpt-4o | TensorFlow | Open Source Contributor
+        </p>
+        <div className="cta-buttons">
+          <a href="#experience" className="btn btn-primary">View Experience</a>
+          <a href="#skills" className="btn btn-secondary">My Tech Stack</a>
+          <a href="/resume.pdf" download className="btn btn-outline">
+            <FiDownload /> Download Resume
+          </a>
+        </div>
+        <div className="landing-stats">
+          <div className="stat">
+            <span>11TB+</span>
+            <small>Data Processed Daily</small>
           </div>
-          <div className="landing-info">
-            <h3>A Full Stack</h3>
-            <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Developer</div>
-              <div className="landing-h2-2">Engineer</div>
-            </h2>
-            <h2>
-              <div className="landing-h2-info">Engineer</div>
-              <div className="landing-h2-info-1">Developer</div>
-            </h2>
+          <div className="stat">
+            <span>70x</span>
+            <small>Performance Boost</small>
+          </div>
+          <div className="stat">
+            <span>GHC 2023</span>
+            <small>Scholarship Award</small>
           </div>
         </div>
-        {children}
       </div>
-    </>
+    </section>
   );
 };
 
